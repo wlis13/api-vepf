@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "eventName": "primeiro evento",
+    "date": "12/10/1995",
+    "local": "igreja luz da palavra",
+    "description": "culto da ceia"
+  }
+]

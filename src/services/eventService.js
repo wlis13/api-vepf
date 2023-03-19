@@ -3,6 +3,13 @@ const fs = require('fs/promises');
 
 const pathData = '../../data.json';
 
+const readEvents = async () => {
+  const pathListData = path.join(__dirname, pathData);
+  const readData = await fs.readFile(pathListData);
+  const parseData = JSON.parse(readData);
+  return parseData;
+};
+
 const insertEvents = async (newEvent) => {
   const pathListData = path.join(__dirname, pathData);
   const readData = await fs.readFile(pathListData);
@@ -13,4 +20,5 @@ const insertEvents = async (newEvent) => {
 
 module.exports = {
   insertEvents,
+  readEvents,
 };
